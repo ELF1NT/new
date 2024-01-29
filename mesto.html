@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/mesto.css">
 </head>
 <body>
-  <h2>Выбор места для фильма: <span id="selectedMovieTitle"></span></h2>
+  <h1>Выберите ваше место</h1>
   <!-- Изображение экрана -->
   <div style="background-color: #c25a2a; color: #fff; padding: 2px; margin-bottom: 50px;">
     ЭКРАН
@@ -91,11 +91,15 @@
         <td class="vip selected">12</td>
       </tr>
       <script>
-        // Retrieve the selected movie title from local storage
-        var selectedMovie = localStorage.getItem('selectedMovie');
-
-        // Display the selected movie title on the page
-        document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-    </script>
+        // Retrieve the selected cinema and time from local storage
+        var selectedCinema = localStorage.getItem('selectedCinema');
+        var selectedTime = localStorage.getItem('selectedTime');
+    
+        // Display the selected cinema and time on the page
+        document.getElementById('selectedCinema').innerText = selectedCinema;
+        document.getElementById('selectedTime').innerText = selectedTime;
+    
+        // ... (existing code) ...
+      </script>
 </body>
 </html>
