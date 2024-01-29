@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <h2>Фильм:<span id="selectedMovieTitle"></span></h2></h2>
+    <h2>Фильм:<span id="selectedMovieTitle"></span></h2>
 
     <div id="cinema1">
         <p>Festival Cinema</p>
@@ -37,9 +37,16 @@
             <button type="button" class="timeButton" onclick="selectTime('time9')">6:00 </button>
         </div>
     </div>
-
+    <button type="button" id="submit" onclick="submitForm()">Назад</button>
     <button type="button" id="submit" onclick="submitForm()">Далее</button>
+  
 </div>
-<script src="js/teatr.js"></script>
+<script>
+    // Retrieve the selected movie title from local storage
+    var selectedMovie = localStorage.getItem('selectedMovie');
+
+    // Display the selected movie title on the page
+    document.getElementById('selectedMovieTitle').innerText = selectedMovie;
+</script>
 </body>
 </html>
