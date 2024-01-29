@@ -13,7 +13,7 @@
         <h3>Кинотеатр: <span id="selectedCinema"></span></h3>
         <h3>Время: <span id="selectedTime"></span></h3>
 
-    <div id="cinema1">
+       <div id="cinema1">
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
             <button type="button" class="timeButton" onclick="selectTime('time1')">12:00</button>
@@ -52,8 +52,9 @@
 
     // Display the selected movie title, cinema, and time on the page
     document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-    document.getElementById('selectedCinema').innerText = selectedCinema;
-    document.getElementById('selectedTime').innerText = selectedTime;
+    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
+    document.getElementById('selectedTime').innerText = selectedTime || 'Не выбран';
+
     // Retrieve the selected movie title from local storage
     var selectedMovie = localStorage.getItem('selectedMovie');
 
@@ -73,6 +74,9 @@
         // Highlight the selected time
         document.getElementById(timeId).classList.add('active');
         selectedTime = timeId;
+
+        // Display the selected time on the page
+        document.getElementById('selectedTime').innerText = selectedTime;
     }
 
     // Function to go back to the previous page
