@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор времени</title>
+    <link rel="stylesheet" type="text/css" href="css/teatr.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Выберите время</h2>
+
+    <div id="cinema1">
+        <p>Festival Cinema</p>
+        <div style="display: flex; justify-content: space-between;">
+            <button type="button" class="timeButton" onclick="selectTime('time1')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time2')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time3')">18:00</button>
+        </div>
+    </div>
+
+    <div id="cinema2">
+        <p>Ertis cinema</p>
+        <div style="display: flex; justify-content: space-between;">
+            <button type="button" class="timeButton" onclick="selectTime('time4')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time5')">3:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time6')">6:00</button>
+        </div>
+    </div>
+
+    <div id="cinema3">
+        <p>Кинотеатр им. Шакена Айманова</p>
+        <div style="display: flex; justify-content: space-between;">
+            <button type="button" class="timeButton" onclick="selectTime('time7')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time8')">3:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time9')">6:00 </button>
+        </div>
+    </div>
+
+    <button type="button" id="submit" onclick="submitForm()">Далее</button>
+</div>
+<script src="js/teatr.js"></script>
+</body>
+</html>

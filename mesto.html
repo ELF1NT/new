@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбор мест в кинотеатре</title>
+  <link rel="stylesheet" type="text/css" href="css/mesto.css">
+</head>
+<body>
+  <h2>Выбор места для фильма: <span id="selectedMovieTitle"></span></h2>
+  <!-- Изображение экрана -->
+  <div style="background-color: #c25a2a; color: #fff; padding: 2px; margin-bottom: 50px;">
+    ЭКРАН
+  </div>
+  <table>
+    <tr>
+        <td class="row-label">Ряд 1</td>
+        <td class="standard selected">1</td>
+        <td class="standard">2</td>
+        <td class="standard selected">3</td>
+        <td class="standard">4</td>
+        <td class="standard selected">5</td>
+        <td class="standard">6</td>
+        <td class="standard selected">7</td>
+        <td class="standard">8</td>
+        <td class="standard">9</td>
+        <td class="standard selected">10</td>
+        <td class="standard">11</td>
+        <td class="standard selected">12</td>
+      </tr>
+
+    <tr>
+        <td class="row-label">Ряд 2</td>
+        <td class="standard selected">1</td>
+        <td class="standard">2</td>
+        <td class="standard selected">3</td>
+        <td class="standard">4</td>
+        <td class="standard selected">5</td>
+        <td class="standard">6</td>
+        <td class="standard selected">7</td>
+        <td class="standard">8</td>
+        <td class="standard">9</td>
+        <td class="standard selected">10</td>
+        <td class="standard">11</td>
+        <td class="standard selected">12</td>
+      </tr>
+
+      <tr>
+        <td class="row-label">Ряд 3</td>
+        <td class="standard selected">1</td>
+        <td class="standard">2</td>
+        <td class="standard selected">3</td>
+        <td class="standard">4</td>
+        <td class="standard selected">5</td>
+        <td class="standard">6</td>
+        <td class="standard selected">7</td>
+        <td class="standard">8</td>
+        <td class="standard">9</td>
+        <td class="standard selected">10</td>
+        <td class="standard">11</td>
+        <td class="standard selected">12</td>
+      </tr>
+      <tr>
+        <td class="row-label">Ряд 4</td>
+        <td class="standard selected">1</td>
+        <td class="standard">2</td>
+        <td class="standard selected">3</td>
+        <td class="standard">4</td>
+        <td class="standard selected">5</td>
+        <td class="standard">6</td>
+        <td class="standard selected">7</td>
+        <td class="standard">8</td>
+        <td class="standard">9</td>
+        <td class="standard selected">10</td>
+        <td class="standard">11</td>
+        <td class="standard selected">12</td>
+      </tr>
+      <tr>
+        <td class="row-label">Ряд 5</td>
+        <td class="vip">1</td>
+        <td class="vip selected">2</td>
+        <td class="vip">3</td>
+        <td class="vip selected">4</td>
+        <td class="vip">5</td>
+        <td class="vip selected">6</td>
+        <td class="vip">7</td>
+        <td class="vip selected">8</td>
+        <td class="vip">9</td>
+        <td class="vip selected">10</td>
+        <td class="vip">11</td>
+        <td class="vip selected">12</td>
+      </tr>
+      <script>
+        // Retrieve the selected movie title from local storage
+        var selectedMovie = localStorage.getItem('selectedMovie');
+
+        // Display the selected movie title on the page
+        document.getElementById('selectedMovieTitle').innerText = selectedMovie;
+    </script>
+</body>
+</html>

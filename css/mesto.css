@@ -1,0 +1,102 @@
+body {
+  /* background: linear-gradient(45deg, #e62727, #393ce6); */
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+th {
+  transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+h1 {
+  color: #333;
+  margin-top: 20px;
+}
+
+table {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px; /* Adjust the maximum width according to your design */
+}
+
+td {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+td:hover {
+  background-color: #d1d1d1; /* Light gray on hover */
+}
+
+.row-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Add styles for different zones */
+td.vip {
+  background-color: #ebbf2f;
+}
+
+td.standard {
+  background-color: #2ecc71;
+}
+
+/* Add some padding to the cells for better spacing */
+td, th {
+  padding: 8px;
+}
+
+/* Add a border to the table for better visibility */
+table {
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+/* Add alternating row colors for better readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+th:hover {
+  background-color: #555; /* Darker color on hover */
+}
+th {
+  cursor: pointer;
+}
+
+/* Add a smooth transition to the cells on hover */
+td {
+  transition: background-color 0.3s ease;
+}
+
+/* Add a border to the cells for better separation */
+td, th {
+  border: 1px solid #ddd;
+}
+
+/* Style the cells in the first column differently */
+td:first-child {
+  background-color: #ddd;
+}
+
+/* Add a subtle border-radius to the cells */
+td, th {
+  border-radius: 4px;
+}
