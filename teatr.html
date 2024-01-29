@@ -24,8 +24,8 @@
         <p>Ertis cinema</p>
         <div style="display: flex; justify-content: space-between;">
             <button type="button" class="timeButton" onclick="selectTime('time4')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time5')">3:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time6')">6:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time5')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time6')">18:00</button>
         </div>
     </div>
 
@@ -33,20 +33,52 @@
         <p>Кинотеатр им. Шакена Айманова</p>
         <div style="display: flex; justify-content: space-between;">
             <button type="button" class="timeButton" onclick="selectTime('time7')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time8')">3:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time9')">6:00 </button>
+            <button type="button" class="timeButton" onclick="selectTime('time8')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time9')">18:00 </button>
         </div>
     </div>
-    <button type="button" id="submit" onclick="submitForm()">Назад</button>
-    <button type="button" id="submit" onclick="submitForm()">Далее</button>
-  
+    
+    <button type="button" id="backButton" onclick="goBack()">Назад</button>
+    <button type="button" id="nextButton" onclick="goNext()">Далее</button>
 </div>
+
 <script>
     // Retrieve the selected movie title from local storage
     var selectedMovie = localStorage.getItem('selectedMovie');
 
     // Display the selected movie title on the page
     document.getElementById('selectedMovieTitle').innerText = selectedMovie;
+
+    var selectedTime = null;
+    var selectedCinema = null;
+
+    // Function to handle time selection
+    function selectTime(timeId) {
+        // Reset the previous selection
+        if (selectedTime) {
+            document.getElementById(selectedTime).classList.remove('active');
+        }
+
+        // Highlight the selected time
+        document.getElementById(timeId).classList.add('active');
+        selectedTime = timeId;
+    }
+
+    // Function to go back to the previous page
+    function goBack() {
+        window.history.back();
+    }
+
+    // Function to navigate to the next page (mesto.html)
+    function goNext() {
+        // Save the selected time and cinema to local storage
+        localStorage.setItem('selectedTime', selectedTime);
+        // You can add more logic to determine the selected cinema
+        localStorage.setItem('selectedCinema', selectedCinema);
+
+        // Redirect to mesto.html
+        window.location.href = 'mesto.html';
+    }
 </script>
 </body>
 </html>
