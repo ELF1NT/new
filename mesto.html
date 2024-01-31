@@ -97,11 +97,12 @@
       <script>
         // Retrieve the selected cinema and time from local storage
         var selectedCinema = localStorage.getItem('selectedCinema');
-        var selectedTime = localStorage.getItem('selectedTime');
-    
-        // Display the selected cinema and time on the page
-        document.getElementById('selectedCinema').innerText = selectedCinema;
-        document.getElementById('selectedTime').innerText = selectedTime;
+    var selectedTime = localStorage.getItem('selectedTime');
+
+    // Display the selected cinema and time on the page
+    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
+    document.getElementById('selectedTime').innerText = selectedTime || 'Не выбран';
+
     
         // ... (existing code) ...
       </script>
