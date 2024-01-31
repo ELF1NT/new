@@ -16,18 +16,20 @@
        <div id="cinema1">
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time1')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time2')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time3')">18:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema')">18:00</button>
+
         </div>
     </div>
 
     <div id="cinema2">
         <p>Ertis cinema</p>
         <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time4')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time5')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time6')">18:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Ertis Cinema')">12:00</button>
+
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Ertis Cinema')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time1', 'Ertis Cinema')">18:00</button>
         </div>
     </div>
 
@@ -45,16 +47,6 @@
 </div>
 
 <script>
-    // Retrieve the selected movie title, cinema, and time from local storage
-    var selectedMovie = localStorage.getItem('selectedMovie');
-    var selectedCinema = localStorage.getItem('selectedCinema');
-    var selectedTime = localStorage.getItem('selectedTime');
-
-    // Display the selected movie title, cinema, and time on the page
-    document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
-    document.getElementById('selectedTime').innerText = selectedTime || 'Не выбран';
-
     // Retrieve the selected movie title from local storage
     var selectedMovie = localStorage.getItem('selectedMovie');
 
@@ -65,7 +57,7 @@
     var selectedCinema = null;
 
     // Function to handle time selection
-    function selectTime(timeId) {
+    function selectTime(timeId, cinema) {
         // Reset the previous selection
         if (selectedTime) {
             document.getElementById(selectedTime).classList.remove('active');
@@ -74,9 +66,11 @@
         // Highlight the selected time
         document.getElementById(timeId).classList.add('active');
         selectedTime = timeId;
+        selectedCinema = cinema;
 
-        // Display the selected time on the page
+        // Display the selected time and cinema on the page
         document.getElementById('selectedTime').innerText = selectedTime;
+        document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
     }
 
     // Function to go back to the previous page
@@ -88,7 +82,6 @@
     function goNext() {
         // Save the selected time and cinema to local storage
         localStorage.setItem('selectedTime', selectedTime);
-        // You can add more logic to determine the selected cinema
         localStorage.setItem('selectedCinema', selectedCinema);
 
         // Redirect to mesto.html
