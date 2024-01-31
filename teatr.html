@@ -17,9 +17,9 @@
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
    
-<button type="button" class="timeButton" onclick="selectTimeCinema1('12:00')">12:00</button>
-<button type="button" class="timeButton" onclick="selectTimeCinema1('15:00')">15:00</button>
-<button type="button" class="timeButton" onclick="selectTimeCinema1('18:00')">18:00</button>
+<button type="button" class="timeButton" id="time1" onclick="selectTimeCinema1('12:00')">12:00</button>
+<button type="button" class="timeButton" id="time2" onclick="selectTimeCinema1('15:00')">15:00</button>
+<button type="button" class="timeButton" id="time3" onclick="selectTimeCinema1('18:00')">18:00</button>
 
         </div>
     </div>
@@ -33,7 +33,7 @@
     // Display the selected movie title on the page
     document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-    var selectTime = null;
+    var selectedTime = null;
     var selectedCinema = null;
 
     // Function to handle time selection for Cinema 1
@@ -44,7 +44,8 @@
     }
 
     // Highlight the selected time
-    document.getElementById(time).classList.add('active');
+    var timeId = 'time' + time.replace(':', '');
+    document.getElementById(timeId).classList.add('active');
     selectedTime = time;
     selectedCinema = 'Festival Cinema';
 
