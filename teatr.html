@@ -17,34 +17,14 @@
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
    
-<button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema', '12:00')">12:00</button>
-<button type="button" class="timeButton" onclick="selectTime('time2', 'Festival Cinema', '15:00')">15:00</button>
-<button type="button" class="timeButton" onclick="selectTime('time3', 'Festival Cinema', '18:00')">18:00</button>
+<button type="button" class="timeButton" onclick="selectTimeCinema1('12:00')">12:00</button>
+<button type="button" class="timeButton" onclick="selectTimeCinema1('15:00')">15:00</button>
+<button type="button" class="timeButton" onclick="selectTimeCinema1('18:00')">18:00</button>
 
         </div>
     </div>
 
-    <div id="cinema2">
-        <p>Ertis cinema</p>
-        <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time4', 'Ertis Cinema', '12:00')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time5', 'Ertis Cinema', '15:00')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time6', 'Ertis Cinema', '18:00')">18:00</button>
-        </div>
-    </div>
-
-    <div id="cinema3">
-        <p>Кинотеатр им. Шакена Айманова</p>
-        <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time7', 'Кинотеатр им. Шакена Айманова', '12:00')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time8', 'Кинотеатр им. Шакена Айманова', '15:00')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time9', 'Кинотеатр им. Шакена Айманова', '18:00')">18:00</button>
-        </div>
-    </div>
-    
-    <button type="button" id="backButton" onclick="goBack()">Назад</button>
-    <button type="button" id="nextButton" onclick="goNext()">Далее</button>
-</div>
+    <!-- ... -->
 
 <script>
     // Retrieve the selected movie title from local storage
@@ -56,22 +36,24 @@
     var selectTime = null;
     var selectedCinema = null;
 
-    // Function to handle time selection
-    function selectTime(timeId, cinema, time) {
+    // Function to handle time selection for Cinema 1
+    function selectTimeCinema1(time) {
     // Reset the previous selection
     if (selectedTime) {
         document.getElementById(selectedTime).classList.remove('active');
     }
 
     // Highlight the selected time
-    document.getElementById(timeId).classList.add('active');
-    selectedTime = time;  // Используйте переменную 'time' вместо 'timeId'
-    selectedCinema = cinema;
+    document.getElementById(time).classList.add('active');
+    selectedTime = time;
+    selectedCinema = 'Festival Cinema';
 
     // Display the selected time and cinema on the page
     document.getElementById('selectedTime').innerText = selectedTime;
     document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
 }
+
+    // ... Добавьте похожие функции для других кинотеатров
 
     // Function to go back to the previous page
     function goBack() {
