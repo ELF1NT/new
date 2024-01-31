@@ -11,14 +11,15 @@
     <div class="container">
         <h2>Фильм: <span id="selectedMovieTitle"></span></h2>
         <h3>Кинотеатр: <span id="selectedCinema"></span></h3>
-        <h3>Время: <span id="selectedTime"></span></h3>
+        <h3>Время: <span id="selectTime"></span></h3>
 
        <div id="cinema1">
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time2', 'Festival Cinema')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time3', 'Festival Cinema')">18:00</button>
+   
+<button type="button" class="timeButton" onclick="selectTime('time1', 'Festival Cinema', '12:00')">12:00</button>
+<button type="button" class="timeButton" onclick="selectTime('time2', 'Festival Cinema', '15:00')">15:00</button>
+<button type="button" class="timeButton" onclick="selectTime('time3', 'Festival Cinema', '18:00')">18:00</button>
 
         </div>
     </div>
@@ -26,18 +27,18 @@
     <div id="cinema2">
         <p>Ertis cinema</p>
         <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time4', 'Ertis Cinema')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time5', 'Ertis Cinema')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time6', 'Ertis Cinema')">18:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time4', 'Ertis Cinema', '12:00')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time5', 'Ertis Cinema', '15:00')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time6', 'Ertis Cinema', '18:00')">18:00</button>
         </div>
     </div>
 
     <div id="cinema3">
         <p>Кинотеатр им. Шакена Айманова</p>
         <div style="display: flex; justify-content: space-between;">
-            <button type="button" class="timeButton" onclick="selectTime('time7')">12:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time8')">15:00</button>
-            <button type="button" class="timeButton" onclick="selectTime('time9')">18:00 </button>
+            <button type="button" class="timeButton" onclick="selectTime('time7', 'Кинотеатр им. Шакена Айманова', '12:00')">12:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time8', 'Кинотеатр им. Шакена Айманова', '15:00')">15:00</button>
+            <button type="button" class="timeButton" onclick="selectTime('time9', 'Кинотеатр им. Шакена Айманова', '18:00')">18:00</button>
         </div>
     </div>
     
@@ -52,25 +53,25 @@
     // Display the selected movie title on the page
     document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-    var selectedTime = null;
+    var selectTime = null;
     var selectedCinema = null;
 
     // Function to handle time selection
-    function selectTime(timeId, cinema) {
-        // Reset the previous selection
-        if (selectedTime) {
-            document.getElementById(selectedTime).classList.remove('active');
-        }
-
-        // Highlight the selected time
-        document.getElementById(timeId).classList.add('active');
-        selectedTime = timeId;
-        selectedCinema = cinema;
-
-        // Display the selected time and cinema on the page
-        document.getElementById('selectedTime').innerText = selectedTime;
-        document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
+    function selectTime(timeId, cinema, time) {
+    // Reset the previous selection
+    if (selectedTime) {
+        document.getElementById(selectedTime).classList.remove('active');
     }
+
+    // Highlight the selected time
+    document.getElementById(timeId).classList.add('active');
+    selectedTime = time;  // Используйте переменную 'time' вместо 'timeId'
+    selectedCinema = cinema;
+
+    // Display the selected time and cinema on the page
+    document.getElementById('selectedTime').innerText = selectedTime;
+    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
+}
 
     // Function to go back to the previous page
     function goBack() {
@@ -80,8 +81,8 @@
     // Function to navigate to the next page (mesto.html)
     function goNext() {
         // Save the selected time and cinema to local storage
-        localStorage.setItem('selectedTime', selectedTime);
-        localStorage.setItem('selectedCinema', selectedCinema);
+        localStorage.setItem('selectTime', selectedTime);
+        localStorage.setItem('selectCinema', selectedCinema);
 
         // Redirect to mesto.html
         window.location.href = 'mesto.html';
