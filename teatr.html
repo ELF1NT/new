@@ -44,17 +44,23 @@
 </div>
 </div>
 <button onclick="window.location.href='index.html'">Назад</button>
-<button onclick="window.location.href='mesto.html'">Далее</button>
+<a href="#" onclick="saveAndRedirect()"><button>Далее</button></a>
     <script>
 var selectedMovie = localStorage.getItem('selectedMovie');
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
+
+function saveCinema(selectedCinema) {
 var selectedCinema = document.getElementById('cinema').value;
 localStorage.setItem('selectedCinema', selectedCinema);
+window.location.href = 'mesto.html';
+}
+function saveTime(selectTime) {
 var selectTime = document.getElementById('time').value;
 localStorage.setItem('selectTime', selectTime);
+window.location.href = 'mesto.html';
+}
 
-
-        function selectTimeCinema1(time) {
+function selectTimeCinema1(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
