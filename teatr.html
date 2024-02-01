@@ -44,6 +44,12 @@
 </div>
 </div>
     <script>
+
+        // Retrieve the selected movie title from local storage
+    var selectedMovie = localStorage.getItem('selectedMovie');
+
+// Display the selected movie title on the page
+document.getElementById('selectedMovieTitle').innerText = selectedMovie;
         function selectTimeCinema1(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
