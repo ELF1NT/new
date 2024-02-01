@@ -16,60 +16,21 @@
        <div id="cinema1">
         <p>Festival Cinema</p>
         <div style="display: flex; justify-content: space-between;">
-   
+
 <button type="button" class="timeButton" id="time1" onclick="selectTimeCinema1('12:00')">12:00</button>
 <button type="button" class="timeButton" id="time2" onclick="selectTimeCinema1('15:00')">15:00</button>
 <button type="button" class="timeButton" id="time3" onclick="selectTimeCinema1('18:00')">18:00</button>
 
         </div>
     </div>
-
-    <!-- ... -->
-
-<script>
-    // Retrieve the selected movie title from local storage
-    var selectedMovie = localStorage.getItem('selectedMovie');
-
-    // Display the selected movie title on the page
-    document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-
-    var selectedTime = null;
-    var selectedCinema = null;
-
-    // Function to handle time selection for Cinema 1
-    function selectTimeCinema1(time) {
-    // Reset the previous selection
-    if (selectedTime) {
-        document.getElementById(selectedTime).classList.remove('active');
-    }
-
-    // Highlight the selected time
-    var timeId = 'time' + time.replace(':', '');
-    document.getElementById(timeId).classList.add('active');
-    selectedTime = time;
-    selectedCinema = 'Festival Cinema';
-
-    // Display the selected time and cinema on the page
-    document.getElementById('selectedTime').innerText = selectedTime;
-    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
+    <script>
+        function selectTimeCinema1(time) {
+    // Сохраняем выбранное время
+    document.getElementById('selectTime').textContent = time;
+    // Сохраняем название кинотеатра
+    document.getElementById('selectedCinema').textContent = 'Festival Cinema';
 }
-
-    // ... Добавьте похожие функции для других кинотеатров
-
-    // Function to go back to the previous page
-    function goBack() {
-        window.history.back();
-    }
-
-    // Function to navigate to the next page (mesto.html)
-    function goNext() {
-        // Save the selected time and cinema to local storage
-        localStorage.setItem('selectTime', selectedTime);
-        localStorage.setItem('selectCinema', selectedCinema);
-
-        // Redirect to mesto.html
-        window.location.href = 'mesto.html';
-    }
-</script>
+    </script>
+    
 </body>
 </html>
