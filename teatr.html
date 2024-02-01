@@ -31,6 +31,18 @@
 <button type="button" class="timeButton" id="time4" onclick="selectTimeCinema2('13:00')">13:00</button>
 <button type="button" class="timeButton" id="time5" onclick="selectTimeCinema2('16:00')">16:00</button>
 <button type="button" class="timeButton" id="time6" onclick="selectTimeCinema2('19:00')">19:00</button>
+</div>
+</div>
+
+<div id="cinema3">
+    <p>Кинотеатр им. Шакена Айманова</p>
+    <div style="display: flex; justify-content: space-between;">
+<button type="button" class="timeButton" id="time4" onclick="selectTimeCinema3('14:00')">14:00</button>
+<button type="button" class="timeButton" id="time5" onclick="selectTimeCinema3('17:00')">17:00</button>
+<button type="button" class="timeButton" id="time6" onclick="selectTimeCinema3('20:00')">20:00</button>
+
+</div>
+</div>
     <script>
         function selectTimeCinema1(time) {
     // Сохраняем выбранное время
@@ -42,8 +54,15 @@ function selectTimeCinema2(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
-    document.getElementById('selectedCinema').textContent = 'Another Cinema';
+    document.getElementById('selectedCinema').textContent = 'Ertis Cinema';
 }
+function selectTimeCinema3(time) {
+    // Сохраняем выбранное время
+    document.getElementById('selectTime').textContent = time;
+    // Сохраняем название кинотеатра
+    document.getElementById('selectedCinema').textContent = 'Кинотеатр им. Шакена Айманова';
+}
+
     </script>
     
 </body>
