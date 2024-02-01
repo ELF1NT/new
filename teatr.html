@@ -21,14 +21,28 @@
 <button type="button" class="timeButton" id="time2" onclick="selectTimeCinema1('15:00')">15:00</button>
 <button type="button" class="timeButton" id="time3" onclick="selectTimeCinema1('18:00')">18:00</button>
 
-        </div>
-    </div>
+</div>
+</div>
+
+<div id="cinema2">
+    <p>Ertis Cinema</p>
+    <div style="display: flex; justify-content: space-between;">
+
+<button type="button" class="timeButton" id="time4" onclick="selectTimeCinema2('13:00')">13:00</button>
+<button type="button" class="timeButton" id="time5" onclick="selectTimeCinema2('16:00')">16:00</button>
+<button type="button" class="timeButton" id="time6" onclick="selectTimeCinema2('19:00')">19:00</button>
     <script>
         function selectTimeCinema1(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
     document.getElementById('selectedCinema').textContent = 'Festival Cinema';
+}
+function selectTimeCinema2(time) {
+    // Сохраняем выбранное время
+    document.getElementById('selectTime').textContent = time;
+    // Сохраняем название кинотеатра
+    document.getElementById('selectedCinema').textContent = 'Another Cinema';
 }
     </script>
     
