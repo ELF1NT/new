@@ -46,12 +46,14 @@
 <button onclick="window.location.href='index.html'">Назад</button>
 <button onclick="window.location.href='mesto.html'">Далее</button>
     <script>
-
-        // Retrieve the selected movie title from local storage
 var selectedMovie = localStorage.getItem('selectedMovie');
-
-// Display the selected movie title on the page
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
+var selectedCinema = document.getElementById('cinema').value;
+localStorage.setItem('selectedCinema', selectedCinema);
+var selectTime = document.getElementById('time').value;
+localStorage.setItem('selectTime', selectTime);
+
+
         function selectTimeCinema1(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
@@ -72,10 +74,7 @@ function selectTimeCinema3(time) {
 }
 
 // Сохранить выбранный кинотеатр и время в localStorage
-var selectedCinema = document.getElementById('cinema').value;
-var selectedTime = document.getElementById('time').value;
-localStorage.setItem('selectedCinema', selectedCinema);
-localStorage.setItem('selectedTime', selectedTime);
+
 
     </script>
     
