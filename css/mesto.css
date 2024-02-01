@@ -1,27 +1,40 @@
 body {
-  /* background: linear-gradient(45deg, #e62727, #393ce6); */
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  text-align: center;
+  background: linear-gradient(45deg, #e62727, #393ce6);
+  font-family: Arial, sans-serif;
+  /* background-color: #9b3e3e; */
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-th {
-  transition: background-color 0.3s ease;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+.container {
+  width: 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the content within the container */
 }
-thead {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
+
 h1 {
   color: #333;
   margin-top: 20px;
 }
 
+h2, h3 {
+  color: #555;
+}
+
+/* Изображение экрана */
+.screen {
+  background-color: #c25a2a;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 table {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -29,7 +42,14 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   width: 80%;
-  max-width: 600px; /* Adjust the maximum width according to your design */
+  max-width: 600px;
+}
+
+th {
+  transition: background-color 0.3s ease;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
 }
 
 td {
@@ -42,7 +62,7 @@ td {
 }
 
 td:hover {
-  background-color: #d1d1d1; /* Light gray on hover */
+  background-color: #d1d1d1;
 }
 
 .row-label {
@@ -50,7 +70,7 @@ td:hover {
   margin-right: 10px;
 }
 
-/* Add styles for different zones */
+/* Дополнительные стили для разных зон */
 td.vip {
   background-color: #ebbf2f;
 }
@@ -59,44 +79,28 @@ td.standard {
   background-color: #2ecc71;
 }
 
-/* Add some padding to the cells for better spacing */
 td, th {
-  padding: 8px;
+  padding: 10px;
 }
 
-/* Add a border to the table for better visibility */
 table {
   border: 2px solid #333;
   border-radius: 8px;
 }
 
-/* Add alternating row colors for better readability */
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
-th:hover {
-  background-color: #555; /* Darker color on hover */
-}
-th {
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-/* Add a smooth transition to the cells on hover */
-td {
   transition: background-color 0.3s ease;
 }
 
-/* Add a border to the cells for better separation */
-td, th {
-  border: 1px solid #ddd;
-}
-
-/* Style the cells in the first column differently */
-td:first-child {
-  background-color: #ddd;
-}
-
-/* Add a subtle border-radius to the cells */
-td, th {
-  border-radius: 4px;
+button:hover {
+  background-color: #555;
 }
