@@ -48,10 +48,9 @@
     <script>
 var selectedMovie = localStorage.getItem('selectedMovie');
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-var selectedCinema = document.getElementById('cinema').value;
-localStorage.setItem('selectedCinema', selectedCinema);
-var selectTime = document.getElementById('time').value;
-localStorage.setItem('selectTime', selectTime);
+var selectedCinema = localStorage.getItem('selectedCinema');
+document.getElementById('selectedCinema').innerText = selectedCinema;
+
 
 
         function selectTimeCinema1(time) {
