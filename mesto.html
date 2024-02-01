@@ -99,11 +99,19 @@
         var selectedMovie = localStorage.getItem('selectedMovie');
         document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-        window.onload = function() {
+window.onload = function() {
     var selectedTime = localStorage.getItem('selectedTime');
     var selectedCinema = localStorage.getItem('selectedCinema');
-    document.getElementById('selectTime').textContent = selectedTime;
-    document.getElementById('selectedCinema').textContent = selectedCinema;
+    if (selectedTime === null || selectedCinema === null) {
+        // Выводим сообщение об ошибке, если данные не найдены
+        alert('Ошибка: время или кинотеатр не выбраны');
+    } else {
+        document.getElementById('selectTime').textContent = selectedTime;
+        document.getElementById('selectedCinema').textContent = selectedCinema;
+    }
+}
+</script>
+
 }
 
       </script>
