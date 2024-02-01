@@ -48,7 +48,7 @@
     <script>
 
         // Retrieve the selected movie title from local storage
-    var selectedMovie = localStorage.getItem('selectedMovie');
+var selectedMovie = localStorage.getItem('selectedMovie');
 
 // Display the selected movie title on the page
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
@@ -70,6 +70,12 @@ function selectTimeCinema3(time) {
     // Сохраняем название кинотеатра
     document.getElementById('selectedCinema').textContent = 'Кинотеатр им. Шакена Айманова';
 }
+
+// Сохранить выбранный кинотеатр и время в localStorage
+var selectedCinema = document.getElementById('cinema').value;
+var selectedTime = document.getElementById('time').value;
+localStorage.setItem('selectedCinema', selectedCinema);
+localStorage.setItem('selectedTime', selectedTime);
 
     </script>
     
