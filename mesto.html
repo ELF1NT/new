@@ -17,7 +17,7 @@
   
   <div class="screen">ЭКРАН</div>
 
-  <table>
+  <table onclick="seatClick(event)">
     <tr>
         <td class="row-label">Ряд 1</td>
         <td class="standard selected">1</td>
@@ -113,6 +113,22 @@
     document.getElementById('selectedMovieTitle').innerText = selectedMovie;
     document.getElementById('selectedCinema').innerText = selectedCinema;
     document.getElementById('selectTime').innerText = selectTime;
+
+
+    function seatClick(event) {
+      if (event.target.classList.contains('standard') || event.target.classList.contains('vip')) {
+        if (!event.target.classList.contains('selected') && countSelectedSeats() < 5) {
+          event.target.classList.add('selected');
+        } else if (event.target.classList.contains('selected')) {
+          event.target.classList.remove('selected');
+        }
+      }
+    }
+
+    function countSelectedSeats() {
+      var selectedSeats = document.querySelectorAll('.selected');
+      return selectedSeats.length;
+    }
       </script>
 </body>
 </html>
