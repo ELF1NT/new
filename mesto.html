@@ -99,8 +99,11 @@
         var selectedMovie = localStorage.getItem('selectedMovie');
         document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-        var selectTime = localStorage.getItem('selectTime');
-        document.getElementById('selectTime').innerText = selectTime;
+  // Получить выбранный кинотеатр и время из localStorage
+var selectedCinema = localStorage.getItem('selectedCinema');
+var selectedTime = localStorage.getItem('selectedTime');
+document.getElementById('selectedCinema').innerText = selectedCinema;
+document.getElementById('selectedTime').innerText = selectedTime;
 
         // ... (existing code) ...
       </script>
