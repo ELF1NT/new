@@ -99,11 +99,33 @@
         var selectedMovie = localStorage.getItem('selectedMovie');
         document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-
-      var selectedCinema = localStorage.getItem('selectedCinema');
-var selectTime = localStorage.getItem('selectTime');
+// Получить URL-адрес текущей страницы
+var url = window.location.href;
+// Разбить его на части по знаку ?
+var parts = url.split('?');
+// Получить часть после знака ? (это параметры)
+var params = parts[1];
+// Разбить параметры по знаку &
+var pairs = params.split('&');
+// Создать объект для хранения данных параметров
+var data = {};
+// Пройти по каждой паре параметров
+for (var i = 0; i < pairs.length; i++) {
+  // Разбить пару по знаку =
+  var pair = pairs[i].split('=');
+  // Получить ключ и значение
+  var key = pair[0];
+  var value = pair[1];
+  // Добавить их в объект data
+  data[key] = value;
+}
+// Получить данные кинотеатра и времени из объекта data
+var selectedCinema = data['cinema'];
+var selectTime = data['time'];
+// Вставить их в соответствующие элементы
 document.getElementById('selectedCinema').innerText = selectedCinema;
 document.getElementById('selectTime').innerText = selectTime;
+
 
         // ... (existing code) ...
       </script>
