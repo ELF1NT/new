@@ -9,9 +9,9 @@
 <body>
   <h1>Выберите ваше место</h1>
 
-  <p>Фильм: <span id="selectedMovieTitle"></span></p>
-  <p>Кинотеатр: <span id="selectedCinema"></span></p>
-  <p>Время: <span id="selectedTime"></span></p>
+  <h2>Фильм: <span id="selectedMovieTitle"></span></h2>
+  <h3>Кинотеатр: <span id="selectedCinema"></span></h3>
+  <h3>Время: <span id="selectTime"></span></h3>
   <!-- Изображение экрана -->
   <div style="background-color: #c25a2a; color: #fff; padding: 2px; margin-bottom: 50px;">
     ЭКРАН
@@ -96,14 +96,12 @@
       </tr>
       <script>
         // Retrieve the selected cinema and time from local storage
-        var selectedCinema = localStorage.getItem('selectedCinema');
-    var selectedTime = localStorage.getItem('selectedTime');
+        var selectedMovie = localStorage.getItem('selectedMovie');
+        document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-    // Display the selected cinema and time on the page
-    document.getElementById('selectedCinema').innerText = selectedCinema || 'Не выбран';
-    document.getElementById('selectedTime').innerText = selectedTime || 'Не выбран';
+        var selectedMovie = localStorage.getItem('selectTime');
+        document.getElementById('selectTime').innerText = selectTime;
 
-    
         // ... (existing code) ...
       </script>
 </body>
