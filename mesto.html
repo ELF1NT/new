@@ -95,15 +95,15 @@
         <td class="vip selected">12</td>
       </tr>
       <script>
-        // Retrieve the selected cinema and time from local storage
+      
         var selectedMovie = localStorage.getItem('selectedMovie');
         document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-  // Получить выбранный кинотеатр и время из localStorage
-var selectedCinema = localStorage.getItem('selectedCinema');
-var selectedTime = localStorage.getItem('selectedTime');
+
+      var selectedCinema = localStorage.getItem('selectedCinema');
+var selectTime = localStorage.getItem('selectTime');
 document.getElementById('selectedCinema').innerText = selectedCinema;
-document.getElementById('selectedTime').innerText = selectedTime;
+document.getElementById('selectTime').innerText = selectTime;
 
         // ... (existing code) ...
       </script>
