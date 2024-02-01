@@ -44,32 +44,37 @@
 </div>
 </div>
 <button onclick="window.location.href='index.html'">Назад</button>
-<button onclick="window.location.href='mesto.html'">Далее</button>
+<button onclick="goToNextPage()">Далее</button>
     <script>
 var selectedMovie = localStorage.getItem('selectedMovie');
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
-var selectedCinema = localStorage.getItem('selectedCinema');
-document.getElementById('selectedCinema').innerText = selectedCinema;
-
-
-
         function selectTimeCinema1(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
     document.getElementById('selectedCinema').textContent = 'Festival Cinema';
+    localStorage.setItem('selectTime', time);
+    localStorage.setItem('selectedCinema', 'Festival Cinema');
 }
 function selectTimeCinema2(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
     document.getElementById('selectedCinema').textContent = 'Ertis Cinema';
+    localStorage.setItem('selectTime', time);
+    localStorage.setItem('selectedCinema', 'dfdsfsd');
 }
 function selectTimeCinema3(time) {
     // Сохраняем выбранное время
     document.getElementById('selectTime').textContent = time;
     // Сохраняем название кинотеатра
     document.getElementById('selectedCinema').textContent = 'Кинотеатр им. Шакена Айманова';
+    localStorage.setItem('selectTime', time);
+    localStorage.setItem('selectedCinema', 'Fesdsfdsfdsa');
+}
+
+function goToNextPage() {
+    window.location.href='mesto.html';
 }
 
 // Сохранить выбранный кинотеатр и время в localStorage
