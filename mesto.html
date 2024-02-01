@@ -99,27 +99,13 @@
         var selectedMovie = localStorage.getItem('selectedMovie');
         document.getElementById('selectedMovieTitle').innerText = selectedMovie;
 
-  function selectTimeCinema1(time) {
-    // Сохраняем выбранное время
-    document.getElementById('selectTime').textContent = time;
-    // Сохраняем название кинотеатра
-    document.getElementById('selectedCinema').textContent = 'Festival Cinema';
-}
-function selectTimeCinema2(time) {
-    // Сохраняем выбранное время
-    document.getElementById('selectTime').textContent = time;
-    // Сохраняем название кинотеатра
-    document.getElementById('selectedCinema').textContent = 'Ertis Cinema';
-}
-function selectTimeCinema3(time) {
-    // Сохраняем выбранное время
-    document.getElementById('selectTime').textContent = time;
-    // Сохраняем название кинотеатра
-    document.getElementById('selectedCinema').textContent = 'Кинотеатр им. Шакена Айманова';
+        window.onload = function() {
+    var selectedTime = localStorage.getItem('selectedTime');
+    var selectedCinema = localStorage.getItem('selectedCinema');
+    document.getElementById('selectTime').textContent = selectedTime;
+    document.getElementById('selectedCinema').textContent = selectedCinema;
 }
 
-
-        // ... (existing code) ...
       </script>
 </body>
 </html>
