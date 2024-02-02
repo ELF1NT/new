@@ -9,6 +9,7 @@
 <body>
 
     <div class="container">
+        <h1>Выберите время и кинотеатр</h1>
         <h2>Фильм: <span id="selectedMovieTitle"></span></h2>
         <h3>Кинотеатр: <span id="selectedCinema"></span></h3>
         <h3>Время: <span id="selectTime"></span></h3>
@@ -43,9 +44,14 @@
 
 </div>
 </div>
+
 <button onclick="window.location.href='index.html'">Назад</button>
 <button onclick="goToNextPage()">Далее</button>
+
     <script>
+
+
+
 var selectedMovie = localStorage.getItem('selectedMovie');
 document.getElementById('selectedMovieTitle').innerText = selectedMovie;
         function selectTimeCinema1(time) {
@@ -76,10 +82,6 @@ function selectTimeCinema3(time) {
 function goToNextPage() {
     window.location.href='mesto.html';
 }
-
-// Сохранить выбранный кинотеатр и время в localStorage
-
-
     </script>
     
 </body>
