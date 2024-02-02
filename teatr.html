@@ -10,12 +10,13 @@
 
     <div class="container">
         <h1>Выберите время и кинотеатр</h1>
-        <h2>Фильм: <span id="selectedMovieTitle"></span></h2>
-        <h3>Кинотеатр: <span id="selectedCinema"></span></h3>
-        <h3>Время: <span id="selectTime"></span></h3>
-
+        <h3>Фильм: <span id="selectedMovieTitle"></span></h3>
+        <h3>Кинотеатр: <span id="selectedCinema"></span></h4>
+        <h3>Время: <span id="selectTime"></span></h4>
+<p>
        <div id="cinema1">
         <h3>Festival Cinema</h3>
+</p>
         <div style="display: flex; justify-content: space-between;">
 
 <button type="button" class="timeButton" id="time1" onclick="selectTimeCinema1('12:00')">12:00</button>
@@ -24,9 +25,10 @@
 
 </div>
 </div>
-
+<p>
 <div id="cinema2">
     <h3>Ertis Cinema</h3>
+</p>
     <div style="display: flex; justify-content: space-between;">
 
 <button type="button" class="timeButton" id="time4" onclick="selectTimeCinema2('13:00')">13:00</button>
@@ -35,8 +37,10 @@
 </div>
 </div>
 
+<p>
 <div id="cinema3">
     <h3>Кинотеатр им. Шакена Айманова</h3>
+</p>
     <div style="display: flex; justify-content: space-between;">
 <button type="button" class="timeButton" id="time4" onclick="selectTimeCinema3('14:00')">14:00</button>
 <button type="button" class="timeButton" id="time5" onclick="selectTimeCinema3('17:00')">17:00</button>
@@ -44,6 +48,7 @@
 
 </div>
 </div>
+
 <p>
 <button onclick="window.location.href='index.html'">Назад</button>
 <button onclick="goToNextPage()">Далее</button>
