@@ -12,20 +12,13 @@ body {
 .container {
   width: 400px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center; /* Center the content within the container */
 }
 
-h1 {
-  color: #333;
-  margin-top: 20px;
-}
 
-h2, h3 {
-  color: #555;
-}
 
 /* Изображение экрана */
 .screen {
@@ -67,21 +60,27 @@ td:hover {
 
 .row-label {
   font-weight: bold;
-  margin-right: 10px;
-}
+  font-size:15px;
 
+  
+}
+.container h3{
+  margin:0;
+  text-align: left;
+  font-size: 20px;
+  color:black;
+}
 /* Дополнительные стили для разных зон */
 td.vip {
   background-color: #ebbf2f;
+
 }
 
 td.standard {
   background-color: #2ecc71;
 }
 
-td, th {
-  padding: 10px;
-}
+
 
 table {
   border: 2px solid #333;
@@ -104,7 +103,33 @@ button {
 button:hover {
   background-color: #555;
 }
-.buttonp {
-  background-color: #e6890700;
+.buttons {
+  background-color: #2ecc71;
   color:#000000;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.buttons:hover {
+  background-color: #258b50;
+  color:#ffffff;
+}
+
+.buttonv {
+  background-color: #c6e733;
+  color:#000000;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.buttonv:hover {
+  background-color: #50631e;
+  color:#ffffff;
 }
