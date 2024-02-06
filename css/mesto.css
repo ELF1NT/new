@@ -10,9 +10,9 @@ body {
   height: 100vh;
 }
 .container {
-  width: 500px;
+  width: 400px;
   background-color: #ffffff;
-  padding: 100px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center; /* Center the content within the container */
@@ -103,4 +103,8 @@ button {
 
 button:hover {
   background-color: #555;
+}
+.buttonp {
+  background-color: #e6890700;
+  color:#000000;
 }
