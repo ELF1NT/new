@@ -26,7 +26,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn2.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -37,7 +37,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn3.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -48,7 +48,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn4.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -59,7 +59,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn5.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -70,7 +70,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn6.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -81,7 +81,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn1.addEventListener("click", function(){
+btn7.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
@@ -91,17 +91,6 @@ btn1.addEventListener("click", function(){
 		tg.MainButton.show();
 	}
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
