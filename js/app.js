@@ -22,6 +22,14 @@ let btn11 = document.getElementById("btn11");
 let btn12= document.getElementById("btn12");
 let btn13 = document.getElementById("btn13");
 let btn14 = document.getElementById("btn14");
+
+let btn15 = document.getElementById("btn15");
+let btn16= document.getElementById("btn16");
+let btn17 = document.getElementById("btn17");
+let btn18 = document.getElementById("btn18");
+let btn19= document.getElementById("btn19");
+let btn20 = document.getElementById("btn20");
+let btn21 = document.getElementById("btn21");
 //первый ряд
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
@@ -100,8 +108,6 @@ btn7.addEventListener("click", function(){
 	}
 });
 //второй ряд
-
-
 btn8.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
@@ -178,8 +184,83 @@ btn14.addEventListener("click", function(){
 		tg.MainButton.show();
 	}
 });
+//третий ряд
+btn15.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 1 в 3 ряду!");
+		item = "15";
+		tg.MainButton.show();
+	}
+});
 
+btn16.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 2 в 3 ряду!");
+		item = "16";
+		tg.MainButton.show();
+	}
+});
 
+btn17.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 3 в 3 ряду!");
+		item = "17";
+		tg.MainButton.show();
+	}
+});
+
+btn18.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 4 в 3 ряду!");
+		item = "18";
+		tg.MainButton.show();
+	}
+});
+
+btn19.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 5 в 3 ряду!");
+		item = "19";
+		tg.MainButton.show();
+	}
+});
+
+btn20.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 6 в 3 ряду!");
+		item = "20";
+		tg.MainButton.show();
+	}
+});
+
+btn21.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали Место 7 в 3 ряду!");
+		item = "21";
+		tg.MainButton.show();
+	}
+});
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
